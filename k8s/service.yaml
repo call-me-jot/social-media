@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: social-media-backend
+spec:
+  selector:
+    app: social-media-backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer
