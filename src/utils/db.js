@@ -10,7 +10,7 @@ class Database {
 
   connect() {
     mongoose
-      .connect(process.env.MONGODB_URI)
+      .connect('mongodb+srv://group_4:final%40project@web-project.paf8p.mongodb.net/?retryWrites=true&w=majority&appName=web-project')
       .then(() => console.log('MongoDB connected'))
       .catch((err) => console.error('MongoDB connection error:', err));
   }

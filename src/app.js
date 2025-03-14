@@ -18,7 +18,10 @@ app.use(express.json());
 
 // Routes
 const postRoutes = require('./routes/postRoutes');
+const commentRoutes = require('./routes/commentRoutes');
+
 app.use('/api', postRoutes);
+app.use('/api', commentRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

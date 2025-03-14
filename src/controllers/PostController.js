@@ -2,8 +2,8 @@ const PostService = require('../services/PostService');
 
 class PostController {
   static async createPost(req, res) {
-    const { title, content, userID } = req.body;
-    const post = await PostService.createPost(title, content, userID);
+    const { title, content, userID, likes, comments } = req.body;
+    const post = await PostService.createPost(title, content, userID, likes, comments);
     res.status(201).json(post);
   }
 
