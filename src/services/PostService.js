@@ -1,8 +1,8 @@
 const Post = require('../models/Post');
 
 class PostService {
-  static async createPost(title, content, userID) {
-    const post = new Post({ title, content, userID });
+  static async createPost(title, content, userID, likes, comments) {
+    const post = new Post({ title, content, userID, likes, comments });
     return await post.save();
   }
 
